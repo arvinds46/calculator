@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculator</title>
+        <script type="text/javascript" src="src/jquery-1.7.2.min.js"></script>
+	    <script type="text/javascript" src="src/jquery.blackcalculator-1.0.1.min.js"></script>
+        <style>
+            body {
+                background-color: #484f58;
+            }
+            .calci {
+                width: 50%;
+                margin: auto;
+            }
+            .calci::before {
+                content: "\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A";
+                white-space: pre;
+            }
+            .calculator {
+                margin: auto !important;
+            }
+        </style>
+    </head>
+<body>
+    <div class="calci"><div class="calculator"></div></div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var langs = {value: 'Value', clear: 'Clear', backspace: 'Clear Entry'};
+            $('.calculator').blackCalculator({type:'advanced', allowKeyboard:true, css:'src/', language:langs});
+        });
+    </script>
+</body>
+</html>
